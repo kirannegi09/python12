@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from .models import User
 from .models import Faq
+from .models import State
+from .models import Footer
 from .models import ImageModel
 from django.contrib.auth import authenticate
 
@@ -51,9 +53,23 @@ class FaqSerializer(serializers.ModelSerializer):
             answer=validated_data['answer']
         )
         return faq
+    
+class StateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = State
+        fields = ['id', 'name', 'image', 'uploaded_at']
+
+    def create(self, validated_data):
+        return State.objects.create(**validated_data)
+
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ImageModel
         fields = ['id', 'image', 'uploaded_at']
+
+class FooterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Footer
+        fields = ['id', 'tagline', 'copyright', 'logo']
 

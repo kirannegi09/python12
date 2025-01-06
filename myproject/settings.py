@@ -16,9 +16,8 @@ from pathlib import Path
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# Media configuration
-MEDIA_URL = '/media/'  # Leave this as '/media/' without '/api'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory for storing media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 

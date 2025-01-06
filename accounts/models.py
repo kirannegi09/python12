@@ -40,3 +40,19 @@ class ImageModel(models.Model):
 
     def __str__(self):
         return f"Image {self.id}"
+    
+class State(models.Model):
+    name = models.TextField()
+    image = models.ImageField(upload_to='images/', null=False, blank=False)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+            return self.name
+    
+class Footer(models.Model):
+    tagline = models.TextField()
+    copyright = models.TextField()
+    logo = models.ImageField(upload_to='images/', null=False, blank=False)
+    
+    def __str__(self):
+            return f"{self.tagline} - {self.copyright}"
