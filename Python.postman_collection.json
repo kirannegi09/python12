@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "ce7d33ce-3363-4734-9dc1-5b985e35a309",
+		"name": "Python",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37473253"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"username\",\r\n  \"email\": \"email@example.com\",\r\n  \"phone\": \"0987654321\",\r\n  \"password\": \"username\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"email@example.com\",\r\n    \"password\": \"username\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "add faq",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "question",
+							"value": "question",
+							"type": "text"
+						},
+						{
+							"key": "answer",
+							"value": "answer",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/faq/"
+			},
+			"response": []
+		},
+		{
+			"name": "get faq",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/get-faq/"
+			},
+			"response": []
+		},
+		{
+			"name": "edit faq",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "question",
+							"value": "hey",
+							"type": "text"
+						},
+						{
+							"key": "answer",
+							"value": "hello",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/faq/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "delete-faq",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/delete-faq/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "images",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1efc66c8-544c-4920-ac87-2e6050429df6"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/images/"
+			},
+			"response": []
+		},
+		{
+			"name": "add-state",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1efc66c8-544c-4920-ac87-2e6050429df6"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/add-state/"
+			},
+			"response": []
+		},
+		{
+			"name": "get-state/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/get-state/"
+			},
+			"response": []
+		},
+		{
+			"name": "edit-state",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "testing",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1efc6a64-d661-4060-a005-ab8b68866d84"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/edit-state/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "delete-state",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/delete-state/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "add-footer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tagline",
+							"value": "tagline",
+							"type": "text"
+						},
+						{
+							"key": "copyright",
+							"value": "copyright",
+							"type": "text"
+						},
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "postman-cloud:///1efc66c8-544c-4920-ac87-2e6050429df6"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/add-footer"
+			},
+			"response": []
+		}
+	]
+}
